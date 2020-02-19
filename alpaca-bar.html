@@ -1,0 +1,64 @@
+<script type="text/javascript">
+     RED.nodes.registerType('alpaca-bar', {
+        category:'Alpaca',
+        defaults :{
+            alpaca: {value : "", type:"alpaca-node"},
+            timescale:{ value : "1Min" },
+            symbol:{ value : "" },
+            limit:{ value : "100" },
+            start:{value:""},
+            end: {value: ""},
+            after: {value: ""},
+            until: {value: ""},
+            useinput:{value:true}
+        },
+        inputs:1,
+        outputs:1,
+        color:"#a6bbcf",
+        paletteLabel:"Bar",
+        label:"Bar",
+        icon:"file.png"
+     }) 
+</script>
+<script type="text/html" data-template-name="alpaca-bar">
+    <div class="form-row">
+        <label for="node-input-alpaca"><i class="icon-tag"></i> Alpaca</label>
+        <input type="text" id="node-input-alpaca">
+    </div>
+    <div class="form-row">
+        <label for="node-input-timescale"><i class="icon-tag"></i> Time Scale</label>
+        <input type="text" id="node-input-timescale">
+    </div>
+    <div class="form-row">
+        <label for="node-input-symbol"><i class="icon-tag"></i> Symbols(comma seperated if more than one)</label>
+        <input type="text" id="node-input-symbol">
+    </div>
+    <div class="form-row">
+        <label for="node-input-limit"><i class="icon-tag"></i> Limit to grab</label>
+        <input type="text" id="node-input-limit">
+    </div>
+    <div class="form-row">
+        <label for="node-input-start"><i class="icon-tag"></i> Start Date</label>
+        <input type="text" id="node-input-start">
+    </div>
+    <div class="form-row">
+        <label for="node-input-end"><i class="icon-tag"></i> End Date</label>
+        <input type="text" id="node-input-end">
+    </div>
+    <div class="form-row">
+        <label for="node-input-until"><i class="icon-tag"></i> Until Date</label>
+        <input type="text" id="node-input-until">
+    </div>
+    <div class="form-row">
+        <label for="node-input-useinput"><i class="icon-tag"></i> Get configuration from input payload</label>
+        <input type="checkbox" id="node-input-useinput">
+    </div>
+
+</div>
+
+</script>
+
+<script type="text/html" data-help-name="alpaca-bar">
+    <p>Get HOCLVT of a given time frame and symbol</p>
+    <p>you can pass the frequested parameters either from the input or use in the proparty window</p>
+</script>
